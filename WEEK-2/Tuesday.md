@@ -1,4 +1,4 @@
-## First Challange
+## First Challenge
 This code does not execute properly. Try to figure out why.
 Before
 ```javascript
@@ -13,7 +13,7 @@ function multiply(a, b){
   return a * b
 }
 ```
-## Second Challange
+## Second Challenge
 You'll be given a string, and have to return the sum of all characters as an int. The function should be able to handle all ASCII characters.
 
 examples:
@@ -31,7 +31,7 @@ function uniTotal (string) {
 }
 ```
 
-## Third Challange
+## Third Challenge
 Write a function get_char() / getChar() which takes a number and returns the corresponding ASCII char for that value.
 
 Example:
@@ -48,7 +48,7 @@ function getChar(c){
 }
 ```
 
-## Fourth Challange
+## Fourth Challenge
 Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
 
 The binary number returned should be a string.
@@ -66,7 +66,7 @@ function addBinary(a,b) {
 }
 ```
 
-## Fifth Challange
+## Fifth Challenge
 Create a function finalGrade, which calculates the final grade of a student depending on two parameters: a grade for the exam and a number of completed projects.
 
 This function should take two arguments: exam - grade for exam (from 0 to 100); projects - number of completed projects (from 0 and above);
