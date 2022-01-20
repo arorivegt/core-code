@@ -48,11 +48,7 @@ Note - there will be no punctuation or digits in the input string, only letters.
 ### Solution
 ```javascript
 function validSpacing(s) {
-  const regex = /([\s]+)/g;
-  if(s.length <= 0) return true;
-  if(s[0] === ' ' || s[s.length - 1] === ' ') return false;
-  const value = s.match(regex);
-  return value != null ? !value.some(element => element.length > 1) : true;
+  return s.trim() == s && !s.includes("  ");
 }
 ```
 
