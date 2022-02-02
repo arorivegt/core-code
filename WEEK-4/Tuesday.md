@@ -184,4 +184,120 @@ persons.forEach( user => logPerson(user) );
 
 # Typescript in operator
 ```typescript
+/*
+
+Intro:
+
+    Since we already have some of the additional
+    information about our users, it's a good idea
+    to output it in a nice way.
+
+Exercise:
+
+    Fix type errors in logPerson function.
+
+    logPerson function should accept both User and Admin
+    and should output relevant information according to
+    the input: occupation for User and role for Admin.
+
+*/
+
+interface User {
+    name: string;
+    age: number;
+    occupation: string;
+}
+
+interface Admin {
+    name: string;
+    age: number;
+    role: string;
+}
+
+export type Person = User | Admin;
+
+export const persons: Person[] = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Jane Doe',
+        age: 32,
+        role: 'Administrator'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    },
+    {
+        name: 'Bruce Willis',
+        age: 64,
+        role: 'World saver'
+    }
+];
+
+export function logPerson(person: User | Admin) {
+    let additionalInformation: string;
+    if ("role" in person) {
+        additionalInformation = person.role;
+    } else {
+        additionalInformation = person.occupation;
+    }
+    console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
+}
+
+persons.forEach(logPerson);
+
+// In case if you are stuck:
+// https://www.typescriptlang.org/docs/handbook/advanced-types.html#using-the-in-operator
+
+```
+# Find the odd int
+Given an array of integers, find the one that appears an odd number of times.
+
+There will always be only one integer that appears an odd number of times.
+
+Examples
+```
+[7] should return 7, because it occurs 1 time (which is odd).
+[0] should return 0, because it occurs 1 time (which is odd).
+[1,1,2] should return 2, because it occurs 1 time (which is odd).
+[0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+[1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+```
+## Solution
+
+```javascript
+function findOdd(A) {
+  let numbers = {};
+  let odd = 0;
+  A.forEach( num => {
+    numbers[num] = numbers[num] 
+      ? numbers[num] + 1 : 1; 
+  });
+  
+  for (const num in numbers) {
+    if(parseInt(numbers[num]) % 2 !== 0 ) odd = parseInt(num);
+  }
+  return odd;
+}
+```
+
+# Stop gninnipS My sdroW!
+Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" spinWords( "This is a test") => returns "This is a test" spinWords( "This is another test" )=> returns "This is rehtona test"
+
+## Solution
+```javascript
+function spinWords(string){
+  return string.split(" ").map( word => 
+                               word = word.length >=5 
+                               ? word.split("").reverse().join("")
+                               : word).join(" ");
+  
+}
 ```
