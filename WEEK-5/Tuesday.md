@@ -138,4 +138,48 @@ The following board would only have 1 correct output (2) because it is the only 
 solveTTT(['O', '', '', 'O', 'X', '', 'X', 'O', 'X'])
 ### Solution
 ```javascript
+function solveTTT(board) {
+    const pass = xs => xs.map(x=>board[x]).join('') === 'XX'
+    for (const xs of [[0,1,2],
+                      [3,4,5],
+                      [6,7,8],
+                      [0,3,6],
+                      [1,4,7],
+                      [2,5,8],
+                      [0,4,8],
+                      [2,4,6]]) if (pass(xs)) return xs.find(x=> !board[x] )
+    return board.findIndex(x => !x)
+  }
+```
+# Tic-Tac-Toe-like table Generator
+Do you have in mind the good old TicTacToe?
+
+Assuming that you get all the data in one array, you put a space around each value, | as a columns separator and multiple - as rows separator, with something like ["O", "X", " ", " ", "X", " ", "X", "O", " "] you should be returning this structure (inclusive of new lines):
+
+ O | X |   
+-----------
+   | X |   
+-----------
+ X | O |   
+Now, to spice up things a bit, we are going to expand our board well beyond a trivial 3 x 3 square and we will accept rectangles of big sizes, still all as a long linear array.
+
+For example, for "O", "X", " ", " ", "X", " ", "X", "O", " ", "O"] (same as above, just one extra "O") and knowing that the length of each row is 5, you will be returning
+
+ O | X |   |   | X 
+-------------------
+   | X | O |   | O 
+And worry not about missing elements, as the array/list/vector length is always going to be a multiple of the width.
+```javascript
+function displayBoard(board, width){
+    let result = "";
+    let begin = 0, end = width;
+    let length = board.length;
+    let countCharacters = (width * 3) + (width - 1);
+    while(begin < length){
+        result += ` ${board.slice(begin, end).join(" | ")} `;
+        begin += width; end = begin + width;
+        if( begin < length) result = result + `\n${"-".repeat(countCharacters)}\n`
+    }
+    return result
+}
 ```
