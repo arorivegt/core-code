@@ -143,7 +143,7 @@ Or... you can use your own implementation, take in mind that you will need to ma
 ### Files
 - [Main.ts](./E04/Main.ts)
 - [Movie.ts](./E04/Movie.ts)
-- [Action.ts](./E04/Action.ts)
+- [ActionMovie.ts](./E04/ActionMovie.ts)
 - [HorrorMovie.ts](./E04/HorrorMovie.ts)
 ```typescript
 import { Main } from './E04/Main';
