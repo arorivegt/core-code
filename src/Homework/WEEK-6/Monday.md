@@ -17,7 +17,7 @@ You are working at a restaurant, your task is to create the main menu, here are 
    - Pepper Steak.... $9.95
    - Manchurian Beef... $11.95
 5. Beverages
-   - Piña Colada.... $3.00
+   - PiÃ±a Colada.... $3.00
    - Spanish Coffee.... $5.50
 
 Your Lead tells you that you need to do this by putting in practice the OOP principles that you know, the specifications are this ones:
@@ -45,8 +45,8 @@ Your Lead tells you that you need to do this by putting in practice the OOP prin
    - chickenOptions (MenuElement[])
    - beefOptions (MenuElement[])
    - beveragesOptions (MenuElement[])
-6. Each of the listed elements with the MenuElement[] type are going to be arrays with instances representing each of the sub-menu elements and each instance inside this array should have the respective information associated with the sub menu option, for example, the beveragesOptions attribute should have instances with the information of the piña colada and spanish coffee options.
-7. Each of the listed elements with the Choice[] type are going to be arrays with objects representing each of the options to show in the menu to the user, so for example if the user selects the Beverages option in the menu menu, your program should read the sub options related to this main option and print does options, Piña Colada.... $3.00, Spanish Coffee.... $5.50 for the user to select and option, this Choice type is declared in the Input class.
+6. Each of the listed elements with the MenuElement[] type are going to be arrays with instances representing each of the sub-menu elements and each instance inside this array should have the respective information associated with the sub menu option, for example, the beveragesOptions attribute should have instances with the information of the piÃ±a colada and spanish coffee options.
+7. Each of the listed elements with the Choice[] type are going to be arrays with objects representing each of the options to show in the menu to the user, so for example if the user selects the Beverages option in the menu menu, your program should read the sub options related to this main option and print does options, PiÃ±a Colada.... $3.00, Spanish Coffee.... $5.50 for the user to select and option, this Choice type is declared in the Input class.
 8. For the method that you need in the Menu class, you need to define the following
    - fillMainMenu
    - fillOptions
@@ -70,7 +70,7 @@ Your Lead tells you that you need to do this by putting in practice the OOP prin
 - subMenu (Choice[]): The elements to show in the sub menu
 - subMenuOptions (MenuElement[]): The options that are related to the sub menu
 
-16. The `showSubMenuOption` should be in charge to show the selected sub-menu from showMainMenu option selected, and then if the user selects and option from that sub-menu, your program need to show the following message : `“Here is your <EMOJI_OF_THE_SELECTED_OPTION> at a $<PRICE_OF_THE_SELECTED_OPTION> cost”`, the idea is to show the subMenu options and then find the selected option inside the subMenuOptions elements and show the emoji and price information to the user.
+16. The `showSubMenuOption` should be in charge to show the selected sub-menu from showMainMenu option selected, and then if the user selects and option from that sub-menu, your program need to show the following message : `â€œHere is your <EMOJI_OF_THE_SELECTED_OPTION> at a $<PRICE_OF_THE_SELECTED_OPTION> costâ€`, the idea is to show the subMenu options and then find the selected option inside the subMenuOptions elements and show the emoji and price information to the user.
 17. Remember that after the user has selected an option of the sub-menu, the user gets the message with the information of the selected option (emoji and price) and then the main menu is shown again to the user, to select the next option or to exit the program.
 18. The Main class should only need to have the creation of an instance of the class menu and the call for the showMainMenu option.
 
@@ -114,6 +114,9 @@ export class Main {
 }
 ```
 
+# Demostration
+
+<img src="./menu.gif" alt="Menu" width="850">
 ### Files
 - [MenuElement.ts](./E01/MenuElement.ts)
 - [Menu.ts](./E01/Menu.ts)
