@@ -117,6 +117,7 @@ export class Main {
 # Demostration
 
 <img src="./menu.gif" alt="Menu" width="850">
+
 ### Files
 - [MenuElement.ts](./E01/MenuElement.ts)
 - [Menu.ts](./E01/Menu.ts)

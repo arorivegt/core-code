@@ -83,13 +83,27 @@ export class Menu {
     }
     async showMainMenu(){
         let opt;
+        console.clear();
         do {
-            opt = (await Input.getSelect('Select a color', this.mainMenu)).data;
-            console.clear();
-            
-
+            opt = (await Input.getSelect('Select a Menu', this.mainMenu)).data;
+            switch(opt){
+                case 1:await this.showSubMenu("Select a Soup option", this.soupMenu, this.soupOptions); break
+                case 2:await this.showSubMenu("Select a Chef's Specials option", this.chefSpecialsMenu, this.chefSpecialsOptions); break
+                case 3:await this.showSubMenu("Select a Chicken option", this.chickenMenu, this.chickenOptions); break
+                case 4:await this.showSubMenu("Select a Beef option", this.beefMenu, this.beefOptions); break
+                case 5:await this.showSubMenu("Select a Beverages option", this.beveragesMenu, this.beveragesOptions); break
+            }
         }while(opt != 0 )
     }
 
-    showSubMenu(){}
+    async showSubMenu(message:string, subMenu:Choice[], subMenuOption:MenuElement[]){
+        let input = await Input.getSelectById(message, subMenu);
+        for(const e of subMenuOption){
+            if(e.id === input.data ){
+                console.log(
+                `============================================\n   Here is your ${e.emoji} at a $${e.price}\n============================================\n`);
+            }
+        }
+        
+    }
 }
