@@ -2,12 +2,7 @@ import { Movie } from "./Movie";
 import { incrementType } from './Type';
 
 export class HorrorMovie extends Movie {
-  jumpScares: incrementType = {
-    count: 0,
-    increment: function () {
-      this.count++;
-    },
-  };
+  jumpScares:number;
   ghost: boolean;
   visions: boolean;
 
@@ -18,7 +13,7 @@ export class HorrorMovie extends Movie {
     language: string,
     runningTime: number,
     releaseYear: number,
-    jumpScares: incrementType,
+    jumpScares: number,
     ghost: boolean,
     visions: boolean
   ) {
@@ -28,31 +23,31 @@ export class HorrorMovie extends Movie {
     this.visions = visions;
   }
 
-  printActionMovie() {
+  printHorrorMovie () {
     console.log(
-      `########## ${this.name} ##########
+      `#################### ${this.name} ####################
         Director: ${this.director}
         language: ${this.language}
         Time: ${this.runningTime}
         Year: ${this.releaseYear}
-        About: ${
-          this.jumpScares.count > 0
-            ? `${this.jumpScares.count} Explotions`
-            : ""
-        } ${this.ghost ? "Ghost" : ""} ${this.visions ? "Vision" : ""}
+        About: ${this.jumpScares} jump scares
+        Ghosts: ${this.expectGhosts()} 
+        Visions: ${this.expectVisions()}
     `
     );
   }
 
   incrementJumpscares(){
-      this.jumpScares.increment;
+      this.jumpScares++;
+      console.log(this.jumpScares);
+      
   }
 
   expectGhosts() {
-    return this.ghost ? "👻" : "¯_(ツ)_/¯";
+    return this.ghost ? "👻" : "🙅";
   }
 
   expectVisions() {
-    return this.visions ? "🔮" : "¯_(ツ)_/¯";
+    return this.visions ? "🔮" : "🙅";
   }
 }

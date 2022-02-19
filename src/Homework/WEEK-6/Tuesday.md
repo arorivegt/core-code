@@ -88,10 +88,11 @@ Or... you can use your own implementation, take in mind that you will need to ma
 ### Files
 - [Main.ts](./E02/Main.ts)
 - [Movie.ts](./E02/Movie.ts)
+- [Input.ts](./E02/Input.ts)
 - [ActionMovie.ts](./E02/ActionMovie.ts)
 - [HorrorMovie.ts](./E02/HorrorMovie.ts)
 ```typescript
-import { Main } from './E04/Main';
+import { Main } from './E02/Main';
 const program = new Main();
 program.start();
 ```

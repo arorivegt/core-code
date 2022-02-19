@@ -22,3 +22,6 @@
 - [Tuesday](./WEEK-5/Tuesday.md) `Typescript`
 - [Wednesday](./WEEK-5/Wednesday.md) `Typescript`
 - [Thursday](./WEEK-5/Thursday.md) `Typescript`
+6. Week 6
+- [Monday](./WEEK-6/Monday.md) `Typescript`
+- [Tuesday](./WEEK-6/Tuesday.md) `Typescript`
