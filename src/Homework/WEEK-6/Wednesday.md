@@ -174,7 +174,7 @@ You'll have to simulate the video game's character selection screen behaviour, m
 
 Screen:
 
-<img src="./street..jpg" alt="screen" width="850">
+<img src="./street.jpg" alt="screen" width="850">
 ## Solution
 W
 ```typescript
