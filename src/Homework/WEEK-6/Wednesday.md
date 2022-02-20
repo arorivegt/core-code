@@ -175,8 +175,9 @@ You'll have to simulate the video game's character selection screen behaviour, m
 Screen:
 
 <img src="./street.jpg" alt="screen" width="850">
+  
 ## Solution
-W
+  
 ```typescript
 export function streetFighterSelection(fighters: Array<string[]>, position: number[], moves: string[]) {
    let [x , y] = position;
@@ -188,4 +189,4 @@ export function streetFighterSelection(fighters: Array<string[]>, position: numb
         return fighters[x][y];
     })
 }
-```W
+```
