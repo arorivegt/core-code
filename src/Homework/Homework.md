@@ -25,3 +25,4 @@
 6. Week 6
 - [Monday](./WEEK-6/Monday.md) `Typescript`
 - [Tuesday](./WEEK-6/Tuesday.md) `Typescript`
+- [Wednesday](./WEEK-6/Wednesday.md) `Typescript`
