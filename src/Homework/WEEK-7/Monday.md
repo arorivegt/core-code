@@ -80,3 +80,9 @@ The main class is simple, in the start method you should have a friendly-menu to
 
 <h2>#2</h2>
 <img src="./tictactoe2.gif" alt="Tictactoe2" width="850">
+
+### Files
+- [Board.ts](./E01/Board.ts)
+- [Input.ts](./E01/Input.ts)
+- [Player.ts](./E02/Player.ts)
+- [TicTacToe.ts](./E01/TicTacToe.ts)
