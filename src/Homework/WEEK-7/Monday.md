@@ -87,3 +87,8 @@ The main class is simple, in the start method you should have a friendly-menu to
 - [Player.ts](./E02/Player.ts)
 - [TicTacToe.ts](./E01/TicTacToe.ts)
 - [Main.ts](./E01/Main.ts)
+
+```javascript
+import { Main } from "./WEEK-7/E01/Main";
+new Main().start();
+```
