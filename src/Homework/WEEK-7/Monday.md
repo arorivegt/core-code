@@ -86,3 +86,4 @@ The main class is simple, in the start method you should have a friendly-menu to
 - [Input.ts](./E01/Input.ts)
 - [Player.ts](./E02/Player.ts)
 - [TicTacToe.ts](./E01/TicTacToe.ts)
+- [Main.ts](./E01/Main.ts)
