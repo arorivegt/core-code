@@ -12,6 +12,10 @@ export class Main {
                     await begin.playersSetup(); 
                     break;
                 }
+                case 2:{ 
+                    begin.getPreviousHistoryGame(); 
+                    break;
+                }
             }
         }while (opt != 0);
     }
