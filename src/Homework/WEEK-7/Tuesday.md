@@ -46,3 +46,43 @@ list.removeLast(); // [1,2,3]
 console.log(list.toString()); // [1,2,3]
 console.log(list.size); // 3
 ```
+
+# Encrypt this!
+Acknowledgments:
+I thank yvonne-liu for the idea and for the example tests :)
+
+Description:
+Encrypt this!
+
+You want to create secret messages which can be deciphered by the Decipher this! kata. Here are the conditions:
+
+Your message is a string containing space separated words.
+You need to encrypt each word in the message using the following rules:
+The first letter must be converted to its ASCII code.
+The second letter must be switched with the last letter
+Keepin' it simple: There are no special characters in the input.
+Examples:
+```
+encryptThis "Hello" == "72olle"
+encryptThis "good" == "103doo"
+encryptThis "hello world" == "104olle 119drlo"
+```
+
+# Solution
+
+```javascript
+export const encryptThis = (str: string): string => {
+    if (str.length <= 0) return ""
+    return str
+    .split(" ")
+    .map(e => {
+        let begin = e[0].charCodeAt(0).toString();
+        let last = e.length > 2 ? e[e.length - 1] : "";
+        let second = e.length > 2 ? e[1] : "";
+        let rest = e.length > 2 ? e.substring(2,e.length - 1 ) : e.substring(1);
+        return begin + last + rest + second; 
+    }).join(" ");
+}
+
+console.log(encryptThis("A wise old owl lived in an oak"));
+```
