@@ -31,3 +31,7 @@
 - [Tuesday](./WEEK-7/Tuesday.md) `Typescript`
 - [Wednesday](./WEEK-7/Wednesday.md) `Typescript`
 - [Thursday](./WEEK-7/Thursday.md) `Typescript`
+8. Week 8
+- [Monday](./WEEK-8/Monday.md) `Typescript`
+- [Tuesday](./WEEK-8/Tuesday.md) `Typescript`
+- [Wednesday](./WEEK-8/Wednesday.md) `Typescript`
