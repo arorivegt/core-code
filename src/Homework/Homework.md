@@ -35,3 +35,4 @@
 - [Monday](./WEEK-8/Monday.md) `html/css`
 - [Tuesday](./WEEK-8/Tuesday.md) `html/css`
 - [Wednesday](./WEEK-8/Wednesday.md) `html/css`
+- [Thursday](./WEEK-8/Thursday.md) `Typescript`
